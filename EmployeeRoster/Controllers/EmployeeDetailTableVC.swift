@@ -9,7 +9,16 @@
 import UIKit
 
 class EmployeeDetailTableVC: UITableViewController, UITextFieldDelegate {
-
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    var isEditingBirthday : Bool = false {
+        didSet {
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
+    }
+    
+    
     struct PropertyKeys {
         static let unwindToListIndentifier = "UnwindToListSegue"
     }
@@ -39,6 +48,10 @@ class EmployeeDetailTableVC: UITableViewController, UITextFieldDelegate {
         } else {
             navigationItem.title = "New Employee"
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        <#code#>
     }
 
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {

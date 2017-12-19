@@ -139,12 +139,34 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="216" id="fuy-O6-zfC">
+                                        <rect key="frame" x="0.0" y="123" width="375" height="216"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fuy-O6-zfC" id="Yl5-FT-38u">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZbL-vr-BGe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="535379040.46854001">
+                                                        <!--2017-12-19 12:24:00 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZbL-vr-BGe" firstAttribute="top" secondItem="Yl5-FT-38u" secondAttribute="top" id="2g8-CN-Z40"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZbL-vr-BGe" secondAttribute="trailing" id="Wv7-dR-u6f"/>
+                                                <constraint firstItem="ZbL-vr-BGe" firstAttribute="leading" secondItem="Yl5-FT-38u" secondAttribute="leading" id="apY-dC-OQi"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZbL-vr-BGe" secondAttribute="bottom" id="jOc-Fy-Al7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="aDF-tK-lSx">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="u3K-uz-UjH">
-                                        <rect key="frame" x="0.0" y="159" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="375" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u3K-uz-UjH" id="6dm-Hg-fuN">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -196,6 +218,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="datePicker" destination="ZbL-vr-BGe" id="a9k-ou-9X5"/>
                         <outlet property="dobLabel" destination="eDi-3x-Sdd" id="hKH-oX-57e"/>
                         <outlet property="employeeTypeLabel" destination="cPh-9e-v2j" id="hj4-eQ-B8k"/>
                         <outlet property="nameTextField" destination="zjD-iz-eCp" id="ZRi-HR-sx5"/>
